@@ -1,8 +1,11 @@
-package com.example.prypago_colegiatura
+package com.example.prypago_colegiatura.presentador
+
+import com.example.prypago_colegiatura.vista.MainActivity
+import com.example.prypago_colegiatura.modelo.clsColegiaturaModelo
 
 class clsPagoColegiaturaPresenter(private val vista: MainActivity) {
 
-    private val modelo = clsModelo
+    private val modelo = clsColegiaturaModelo()
     //Procesa y manda mostrar la Matrícula y Nombre
     fun datosAlumno(matricula: String, nombre: String) {
         val resultado = if (matricula.isNotEmpty() || nombre.isNotEmpty()) {
@@ -33,7 +36,7 @@ class clsPagoColegiaturaPresenter(private val vista: MainActivity) {
     //Calcula y manda mostrar los costos de colegiatura
     fun calcularColegiaturaFinal(costoText: String, promedio: Float) {
         val costoBase = costoText.toFloatOrNull() ?: 0f
-        val costoFinal = modelo.calcularColegiatura(costoBase, promedio.toFloat())
+        val costoFinal = modelo.calcularColegiaturaTotal(costoBase, promedio.toFloat())
         vista.mostrarResultadosColegiatura(costoBase, costoFinal)
     }
 }

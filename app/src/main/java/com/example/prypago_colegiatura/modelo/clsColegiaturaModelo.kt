@@ -1,4 +1,4 @@
-package com.example.prypago_colegiatura
+package com.example.prypago_colegiatura.modelo
 
 class clsColegiaturaModelo {
     fun calcularPromedio(promedio1:Float,promedio2:Float,promedio3:Float):Float{
@@ -12,11 +12,11 @@ class clsColegiaturaModelo {
         }
 
     }
-    fun calcularDescuento(promedio: Float,costoColegiatura:Float):Float{
+    fun calcularDescuento(costoColegiatura:Float,promedio: Float):Float{
         return costoColegiatura*porcentajeDescuento(promedio)
     }
-    fun calcularColegiaturaTotal(promedio: Float,costoColegiatura: Float):Float{
-        return costoColegiatura-calcularDescuento(promedio,costoColegiatura)
+    fun calcularColegiaturaTotal(costoColegiatura: Float,promedio: Float):Float{
+        return costoColegiatura-calcularDescuento(costoColegiatura,promedio)
     }
     fun obtenerEstatus(promedio:Float): String{
         return when{
