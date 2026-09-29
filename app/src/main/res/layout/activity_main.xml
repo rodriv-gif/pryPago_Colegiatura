@@ -30,12 +30,14 @@
             android:id="@+id/etMatricula"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_box"
             android:hint="Matricula"
             android:inputType="number"
-            android:background="@drawable/bg_box"
             android:paddingHorizontal="14dp"
-            android:textSize="15sp"
-            android:layout_marginBottom="10dp" />
+            android:textColor="#000000"
+            android:textColorHint="#6B6B6B"
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/etNombre"
@@ -46,6 +48,8 @@
             android:background="@drawable/bg_box"
             android:paddingHorizontal="14dp"
             android:textSize="15sp"
+            android:textColor="#000000"
+            android:textColorHint="#6B6B6B"
             android:layout_marginBottom="10dp" />
 
         <EditText
@@ -57,6 +61,8 @@
             android:background="@drawable/bg_box"
             android:paddingHorizontal="14dp"
             android:textSize="15sp"
+            android:textColor="#000000"
+            android:textColorHint="#6B6B6B"
             android:layout_marginBottom="10dp" />
 
         <EditText
@@ -68,6 +74,8 @@
             android:background="@drawable/bg_box"
             android:paddingHorizontal="14dp"
             android:textSize="15sp"
+            android:textColor="#000000"
+            android:textColorHint="#6B6B6B"
             android:layout_marginBottom="10dp" />
 
         <EditText
@@ -79,6 +87,8 @@
             android:background="@drawable/bg_box"
             android:paddingHorizontal="14dp"
             android:textSize="15sp"
+            android:textColor="#000000"
+            android:textColorHint="#6B6B6B"
             android:layout_marginBottom="10dp" />
 
         <EditText
@@ -90,6 +100,8 @@
             android:background="@drawable/bg_box"
             android:paddingHorizontal="14dp"
             android:textSize="15sp"
+            android:textColor="#000000"
+            android:textColorHint="#6B6B6B"
             android:layout_marginBottom="20dp" />
 
         <!-- Botones de accion -->
