@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Titulo principal -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pago Colegiatura"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/blue_dark"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Entradas de datos -->
+        <EditText
+            android:id="@+id/etMatricula"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Matricula"
+            android:inputType="number"
+            android:background="@drawable/bg_box"
+            android:paddingHorizontal="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:background="@drawable/bg_box"
+            android:paddingHorizontal="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/etPromedioP1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Promedio P1"
+            android:inputType="numberDecimal"
+            android:background="@drawable/bg_box"
+            android:paddingHorizontal="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/etPromedioP2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Promedio P2"
+            android:inputType="numberDecimal"
+            android:background="@drawable/bg_box"
+            android:paddingHorizontal="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/etPromedioP3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Promedio P3"
+            android:inputType="numberDecimal"
+            android:background="@drawable/bg_box"
+            android:paddingHorizontal="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/etCosto"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Costo Colegiatura"
+            android:inputType="numberDecimal"
+            android:background="@drawable/bg_box"
+            android:paddingHorizontal="14dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Botones de accion -->
+        <Button
+            android:id="@+id/btnPromedio"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Promedio"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_button"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnEstatus"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Estatus"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_button"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnColegiatura"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Colegiatura"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_button"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Cuadros de Resultados por separado (como en la imagen) -->
+        <TextView
+            android:id="@+id/tvMatriculaNombre"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Matricula + Nombre"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_box"
+            android:paddingHorizontal="14dp"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/tvPromedioGlobal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Promedio Global"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_box"
+            android:paddingHorizontal="14dp"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/tvColegiaturaActual"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Colegiatura Actual"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_box"
+            android:paddingHorizontal="14dp"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/tvColegiaturaFinal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Colegiatura final"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_box"
+            android:paddingHorizontal="14dp"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:layout_marginBottom="10dp" />
+
+    </LinearLayout>
+</ScrollView>
