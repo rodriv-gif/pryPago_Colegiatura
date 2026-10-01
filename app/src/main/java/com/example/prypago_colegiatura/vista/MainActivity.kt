@@ -69,29 +69,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun obtenerEstatus(v: View) {
-        presentador.datosAlumno(txtMatricula.text.toString(), txtNombre.text.toString())
-        val promedio = presentador.calcular_Promedio(
-            txtP1.text.toString(),
-            txtP2.text.toString(),
-            txtP3.text.toString()
-        )
-        presentador.determinarEstatus(promedio)
+
+        presentador.determinarEstatus(txtPromedioGlobal.text.toString())
     }
 
     private fun obtenerColegiatura(v: View) {
-        presentador.datosAlumno(txtMatricula.text.toString(), txtNombre.text.toString())
-        // 1. Reutilizamos el return de calcular_Promedio
-        val promedio = presentador.calcular_Promedio(
-            txtP1.text.toString(),
-            txtP2.text.toString(),
-            txtP3.text.toString()
-        )
+        presentador.calcularColegiaturaFinal(txtColegiatura.text.toString(), txtColegiaturaActual.text.toString())
+        presentador.ColegiaturaActual(txtColegiatura.text.toString())
 
-        // 2. Pasamos el costo en texto y el promedio ya calculado
-        presentador.calcularColegiaturaFinal(
-            txtColegiatura.text.toString(),
-            promedio
-        )
     }
 
     //Métodos que llama el Presentador para actualizar los TextViews
@@ -100,16 +85,18 @@ class MainActivity : AppCompatActivity() {
         txtMatriculaNombre.text = "Matricula y Nombre: $texto"
     }
 
-    fun mostrarPromedioGlobal(promedio: Float) {
-        txtPromedioGlobal.text = "Promedio Global: " + String.format("%.2f", promedio)
+    fun mostrarPromedioGlobal(promedio: String) {
+        txtPromedioGlobal.text = promedio
     }
 
     fun mostrarEstatus(estatus: String) {
-        txtColegiaturaActual.text = "Estatus: $estatus"
+        txtColegiaturaActual.text = estatus
+    }
+    fun mostrarColegiaturaActual(colegiaturaActual: String) {
+        txtColegiaturaActual.text = "Colegiatura Actual: $colegiaturaActual"
     }
 
-    fun mostrarResultadosColegiatura(costoBase: Float, costoFinal: Float) {
-        txtColegiaturaActual.text = "Colegiatura Actual: $costoBase"
-        txtColegiaturaFinal.text = "Colegiatura final: $costoFinal"
+    fun mostrarResultadosColegiatura(colegiaturaFinal:String) {
+        txtColegiaturaFinal.text = "Colegiatura final: $colegiaturaFinal"
     }
 }
